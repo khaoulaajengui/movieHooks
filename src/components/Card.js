@@ -1,56 +1,26 @@
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
-const movieCard=()=>{
-    return(
-        <>
-    <CardGroup>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Title</Card.Title>
-          <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-    </CardGroup>
-  
+import React from "react";
+import { Card, Col } from 'react-bootstrap'
 
-        </>
+const movieCard=({data})=>{
+  return (
+    
+   
+    {data}.map((movies,i)=> (
+      <Col key={i}>
+        <Card>
+          <Card.Img variant="top" src={movies.poster} />
+          <Card.Body>
+            <Card.Title>{movies.title} </Card.Title>
+            <Card.Text>{movies.description} </Card.Text>
+          </Card.Body>
+          Recommandé à {movies.rating} %
+        </Card>
+      </Col>
+    ))
+  )}
+    
+  ;
 
-    )
-}
 
 
 export default movieCard;
