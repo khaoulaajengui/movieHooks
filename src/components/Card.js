@@ -12,8 +12,10 @@ const movieCard=({data})=>{
           <Card.Body>
             <Card.Title>{movies.title} </Card.Title>
             <Card.Text>{movies.description} </Card.Text>
+            Recommandé à {movies.rating} %  
           </Card.Body>
-          Recommandé à {movies.rating} %
+
+
         </Card>
       </Col>
     ))
