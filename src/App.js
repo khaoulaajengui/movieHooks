@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import MovieCard from './components/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { data } from './Data';
+import data from './Data';
+import NavBar from './NavBar';
+import AddMovie from './components/addMovie';
 function App() {
-  const [movies, setMovies]=useState([data])
-  const[search, setSearch]=useState([])
+  const [Mymovies, setMymovies]=useState(data);
+  const[search, setSearch]=useState('');
+  const [rate,setRate]=useState(0);
   return (
     <div>
-      <MovieCard movies={data}></MovieCard>
+      <NavBar></NavBar>
+      <AddMovie></AddMovie>
      
     </div>
   );

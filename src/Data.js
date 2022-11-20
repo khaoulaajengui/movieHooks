@@ -19,3 +19,4 @@ export const data=[{
     rating : 90,
 
 }]
+export default data;

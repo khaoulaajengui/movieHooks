@@ -5,20 +5,20 @@ const movieCard=({data})=>{
   return (
     
    
-    {data}.map((movies,i)=> (
+    {data.map((movie,i)=> (
       <Col key={i}>
         <Card>
-          <Card.Img variant="top" src={movies.poster} />
+          <Card.Img variant="top" src={movie.poster} />
           <Card.Body>
-            <Card.Title>{movies.title} </Card.Title>
-            <Card.Text>{movies.description} </Card.Text>
-            Recommandé à {movies.rating} %  
+            <Card.Title>{movie.title} </Card.Title>
+            <Card.Text>{movie.description} </Card.Text>
+            Recommandé à {movie.rating} %  
           </Card.Body>
 
 
         </Card>
       </Col>
-    ))
+    ))}
   )}
     
   ;
